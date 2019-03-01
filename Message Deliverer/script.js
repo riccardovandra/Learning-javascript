@@ -11,4 +11,8 @@ sendBtn.addEventListener("click", registerLastMessage);
 function registerLastMessage() {
   let message = messageIn.value;
   lastMessage.innerHTML = message;
+
+  if (messageIn.value == "") {
+    alert("No message inserted, please insert one");
+  }
 }
