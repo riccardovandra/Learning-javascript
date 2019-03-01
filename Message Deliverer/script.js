@@ -10,9 +10,10 @@ sendBtn.addEventListener("click", registerLastMessage);
 
 function registerLastMessage() {
   let message = messageIn.value;
-  lastMessage.innerHTML = message;
-
-  if (messageIn.value == "") {
+ if (message === "") {
     alert("No message inserted, please insert one");
+  } else {
+    lastMessage.innerHTML = message;
+    messageIn.value = '';
   }
 }
